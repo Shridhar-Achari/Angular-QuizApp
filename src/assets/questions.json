@@ -1,0 +1,184 @@
+{
+    "questions": [
+        {
+            "questionText": "What is the purpose of the ngFor directive in Angular?",
+            "options": [
+                {
+                    "text": "To conditionally render elements based on a boolean expression."
+                },
+                {
+                    "text": "To loop through an array and render a template for each item.",
+                    "correct": true
+                },
+                {
+                    "text": "To handle user input and update component data."
+                },
+                {
+                    "text": "To define a reusable template for a component."
+                }
+            ]
+        },
+        {
+            "questionText": "Which of the following is NOT a type of data binding in Angular?",
+            "options": [
+                {
+                    "text": "One-way data binding (interpolation)."
+                },
+                {
+                    "text": "Two-way data binding."
+                },
+                {
+                    "text": "Three-way data binding.",
+                    "correct": true
+                },
+                {
+                    "text": "Property binding."
+                }
+            ]
+        },
+        {
+            "questionText": "What is the role of a service in Angular?",
+            "options": [
+                {
+                    "text": "To define the structure of a component."
+                },
+                {
+                    "text": "To encapsulate reusable logic and data.",
+                    "correct": true
+                },
+                {
+                    "text": "To handle user interface elements."
+                },
+                {
+                    "text": "To manage component state."
+                }
+            ]
+        },
+        {
+            "questionText": "Which of the following is a valid way to define an input property in an Angular component?",
+            "options": [
+                {
+                    "text": "@Input() myProperty: string;",
+                    "correct": true
+                },
+                {
+                    "text": "@Output() myProperty: string;"
+                },
+                {
+                    "text": "@Input myProperty: string;"
+                },
+                {
+                    "text": "myProperty: string;"
+                }
+            ]
+        },
+        {
+            "questionText": "What is the purpose of the ngOnInit lifecycle hook in an Angular component?",
+            "options": [
+                {
+                    "text": "To handle user input events."
+                },
+                {
+                    "text": "To perform cleanup operations when the component is destroyed."
+                },
+                {
+                    "text": "To initialize component data and logic after the component is created.",
+                    "correct": true
+                },
+                {
+                    "text": "To define the component's template."
+                }
+            ]
+        },
+        {
+            "questionText": "Which Angular CLI command is used to create a new component?",
+            "options": [
+                {
+                    "text": "ng new component"
+                },
+                {
+                    "text": "ng add component"
+                },
+                {
+                    "text": "ng generate component",
+                    "correct": true
+                },
+                {
+                    "text": "ng create component"
+                }
+            ]
+        },
+        {
+            "questionText": "What is the purpose of Angular's RouterModule?",
+            "options": [
+                {
+                    "text": "To manage component state."
+                },
+                {
+                    "text": "To handle user input events."
+                },
+                {
+                    "text": "To provide a way to navigate between different views in an application.",
+                    "correct": true
+                },
+                {
+                    "text": "To define reusable templates."
+                }
+            ]
+        },
+        {
+            "questionText": "Which of the following is NOT a valid Angular directive?",
+            "options": [
+                {
+                    "text": "*ngIf"
+                },
+                {
+                    "text": "[attr.disabled]"
+                },
+                {
+                    "text": "[(ngModel)]"
+                },
+                {
+                    "text": "*ngLoop",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionText": "What is the purpose of the async pipe in Angular?",
+            "options": [
+                {
+                    "text": "To handle asynchronous operations and subscribe to observables.",
+                    "correct": true
+                },
+                {
+                    "text": "To format data for display in the view."
+                },
+                {
+                    "text": "To apply custom styling to elements."
+                },
+                {
+                    "text": "To handle user input events."
+                }
+            ]
+        },
+        {
+            "questionText": "How can you inject a service into an Angular component?",
+            "options": [
+                {
+                    "text": "By creating a new instance of the service in the component's constructor."
+                },
+                {
+                    "text": "By declaring the service in the component's providers array.",
+                    "correct": true
+                },
+                {
+                    "text": "By using the @Inject decorator."
+                },
+                {
+                    "text": "By importing the service module directly into the component."
+                }
+            ]
+        }
+    ]
+}

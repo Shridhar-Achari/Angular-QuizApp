@@ -1,0 +1,18 @@
+<div class="container bg-light py-5">
+    <h1 class="display-5">Welcome to InstaQuizApp!</h1>
+    <h3>Rules</h3>
+    <ul>
+        <li>This quiz contains <strong>10 questions</strong>.</li>
+        <li>Each correct answer gives you <strong>+10 points</strong>.</li>
+        <li>Each incorrect answer results in <strong>-10 points</strong>.</li>
+        <li>Skipped questions (timeout): <strong>-10 points</strong>.</li>
+        <li>You have <strong>60 seconds</strong> to answer each question.</li>
+
+    </ul>
+    <h1 style="font-family: cursive; text-align: center;">All the best!</h1>
+    <div class="name col-md-4 my-3">
+        <label for="">Enter your name:</label>
+        <input #name type="text" class="form-control" required>
+    </div>
+    <button class="btn btn-primary btn-lg" (click)="startQuiz(name.value)">Start Quiz!</button>
+</div>

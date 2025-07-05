@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="card mt-3">
+        <div class="d-flex justify-content-between p-3">
+            <div class="image">
+                <img src="/assets/images/sa-logo.jpg" alt="logo1" style="width: 90px; border-radius: 50%;">
+            </div>
+            <div class="quizheader">
+                <h4 class="quiztitle">Insta Quiz App</h4>
+                <p class="name">Welcome <strong>{{name}}</strong></p>
+            </div>
+        </div>
+
+        <ng-container *ngIf="!isQuizComplete">
+            <div class="d-flex justify-content-around py-3">
+                <div class="score">
+                    <h5>{{points}} Points</h5>
+                </div>
+                <div class="question-remaining">
+                    <span style="font-style: italic;">{{currQuest+1}} of {{questionList.length}}</span>
+                </div>
+                <div class="timer">
+                    <h5>{{counter}} Sec</h5>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width':progress+'%'}"></div>
+            </div>
+            <div class="questions mt-2">
+                <div class="card">
+                    <h3>{{questionList[currQuest]?.questionText}}</h3>
+                </div>
+            </div>
+            <div class="options">
+                <div class="card my-2 p-2" [ngClass]="{'bg-success text-white': answerSelected && option.correct,
+    'bg-danger text-white': answerSelected && selectedOptionIndex === i && !option.correct,
+    'border': true
+  }" (click)="!answerSelected && answer(currQuest, option, i)" style="cursor: pointer;"
+                    *ngFor="let option of questionList[currQuest]?.options; let i = index">
+                    {{ option.text }}
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button class="btn" (click)="resetQuiz()"><i class="fa text-primary fa-refresh fa-3x"
+                        aria-hidden="true"></i></button>
+                <button class="btn btn-primary my-2" (click)="skipQuest()">Skip Question</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="isQuizComplete">
+            <div class="row d-flex justify-content-between">
+                <img src="/assets/images/celebrate.jpg" alt="logo1" style="width: 50%;">
+                <div class="result text-center col-md-6 col-sm-12">
+                    <h3>Congratulations!!!<br>You have completed the quiz!<br>Below is your result:<br></h3>
+                    <p>Total No.of Questions : <strong>{{questionList.length}}</strong></p>
+                    <p>Total Correct Answered : <strong>{{correctAns}}</strong></p>
+                    <p>Total Wrong Answered : <strong>{{incorrectAns}}</strong></p>
+                    <p>Total Skipped Questions : <strong>{{skippedQue}}</strong>
+                    <p>Your Score : <strong>{{points}}</strong> Points</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
