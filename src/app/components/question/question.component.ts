@@ -13,6 +13,7 @@ import { interval } from 'rxjs';
 export class QuestionComponent implements OnInit {
   constructor(private http: HttpClient, private questionService: QuestionService) {
   }
+  
   public name: string = '';
   public questionList: any = '';
   public currQuest: number = 0;
